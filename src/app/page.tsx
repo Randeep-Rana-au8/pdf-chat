@@ -1,4 +1,6 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -8,6 +10,16 @@ export default function Home() {
           PDF chat is now public!
         </p>
       </div>
+      <h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
+        Chat with your <span className='text-violet-600'>documents</span> in seconds.
+      </h1>
+      <p className='mt-5 max-w-prose text-zinc-700 sm:text-lg'>
+        PDF chat is a free and open source platform that allows you to chat with your documents in seconds. Just upload a PDF and start chatting!
+      </p>
+
+      <Link href='/dashboard' target='_blank'>
+        Get started <ArrowRight className='ml-2 h-5 w-5' />
+      </Link>
     </MaxWidthWrapper>
   )
 }
