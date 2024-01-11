@@ -1,6 +1,7 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -17,7 +18,14 @@ export default function Home() {
         PDF chat is a free and open source platform that allows you to chat with your documents in seconds. Just upload a PDF and start chatting!
       </p>
 
-      <Link href='/dashboard' target='_blank'>
+      <Link 
+      href='/dashboard' 
+      className={buttonVariants({
+        size: 'lg',
+        className: 'mt-5',
+      })} 
+      target='_blank'
+      >
         Get started <ArrowRight className='ml-2 h-5 w-5' />
       </Link>
     </MaxWidthWrapper>
